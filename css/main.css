@@ -1,0 +1,84 @@
+#sidebar {
+    min-height: 100vh;
+    width: 250px;
+    background: #343a40;
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+#main-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.sidebar-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    padding: 8px 15px;
+    display: block;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.sidebar-link:hover {
+    background: #4b545c;
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar-link.active {
+    background: #4b545c;
+    color: #fff;
+    border-left: 4px solid #007bff;
+}
+
+.sidebar-heading {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.tab-pane {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.tab-pane h4 {
+    color: #333;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.card {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border: none;
+}
+
+.table-search {
+    max-width: 300px;
+    margin-bottom: 1rem;
+}
+
+/* Add responsive sidebar */
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+        transition: all 0.3s;
+    }
+
+    #sidebar.active {
+        margin-left: 0;
+    }
+
+    #main-content {
+        margin-left: 0;
+        transition: all 0.3s;
+    }
+
+    #main-content.active {
+        margin-left: 250px;
+    }
+}
